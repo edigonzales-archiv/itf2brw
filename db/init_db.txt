@@ -9,3 +9,10 @@ psql -d brwso -f /usr/share/postgresql/8.4/contrib/postgis-2.0/postgis.sql
 psql -d brwso -f /usr/share/postgresql/8.4/contrib/postgis-2.0/spatial_ref_sys.sql 
 psql -d brwso -f /usr/share/postgresql/8.4/contrib/postgis-2.0/postgis_comments.sql
 
+
+GRANT ALL ON TABLE geometry_columns TO stefan;
+GRANT SELECT ON TABLE geometry_columns TO mspublic;
+
+GRANT ALL ON TABLE geography_columns TO stefan;
+GRANT SELECT ON TABLE geography_columns TO mspublic;
+
