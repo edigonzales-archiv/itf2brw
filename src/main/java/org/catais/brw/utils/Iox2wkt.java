@@ -261,12 +261,12 @@ public class Iox2wkt {
 	private static void interpolateArc(Coordinate ptStart, Coordinate ptArc, Coordinate ptEnd, double maxOverlaps) {
 
 		double arcIncr = 1;
-		if(maxOverlaps < 0.001) {
+		if(maxOverlaps < 0.00001) {
 			maxOverlaps = 0.002;
 		}
 		
 		// TEMPORARY:
-		maxOverlaps = 0.002;
+		//maxOverlaps = 0.002;
 
 		Coordinate center = getArcCenter(ptStart, ptArc, ptEnd);
 

@@ -57,30 +57,37 @@ public class App
     	} 
     	catch ( Ili2cException ex )
     	{
+    		ex.printStackTrace();
 			logger.fatal( ex.getMessage() );
     	}
     	catch ( IOException ex ) 
     	{
+    		ex.printStackTrace();
 			logger.fatal( ex.getMessage() );
     	} 
     	catch ( NullPointerException ex ) 
     	{
+    		ex.printStackTrace();
 			logger.fatal( ex.getMessage() );
     	} 
     	catch ( IllegalArgumentException ex ) 
     	{
+    		ex.printStackTrace();
 			logger.fatal( ex.getMessage() );
     	} 
     	catch ( ClassNotFoundException ex )
     	{
+    		ex.printStackTrace();
 			logger.fatal( ex.getMessage() );
     	}
     	catch ( SQLException ex )
     	{
+    		ex.printStackTrace();
 			logger.fatal( ex.getMessage() );
     	}
     	catch ( Exception ex ) 
     	{
+    		ex.printStackTrace();
     		logger.fatal( ex.getMessage() );
     	} 
     	finally {

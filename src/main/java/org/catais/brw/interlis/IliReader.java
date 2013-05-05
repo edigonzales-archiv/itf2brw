@@ -27,7 +27,9 @@ import org.geotools.feature.FeatureCollections;
 import org.geotools.data.DataStore;
 import org.geotools.data.DataStoreFinder;
 import org.geotools.data.postgis.PostgisNGDataStoreFactory;
+import org.geotools.data.simple.SimpleFeatureCollection;
 //import org.geotools.data.postgis.PostgisDataStoreFactory;
+import org.geotools.data.DataUtilities;
 import org.geotools.data.DefaultTransaction;
 import org.geotools.data.FeatureSource;
 import org.geotools.data.FeatureStore;
@@ -77,6 +79,7 @@ import org.apache.log4j.Logger;
 import org.catais.brw.utils.PGUtils;
 import org.catais.brw.utils.GTUtils;
 import org.catais.brw.utils.Iox2wkt;
+import org.catais.brw.utils.SurfaceAreaBuilder;
 
 
 public class IliReader {
@@ -118,10 +121,14 @@ public class IliReader {
 
 	private LinkedHashMap collections = new LinkedHashMap();
 	private ArrayList features = null;
-    private FeatureCollection<SimpleFeatureType, SimpleFeature> collection = null;
-    private FeatureCollection<SimpleFeatureType, SimpleFeature> areaHelperCollection = null;
-    private FeatureCollection<SimpleFeatureType, SimpleFeature> surfaceMainCollection = null;
+	private ArrayList areaHelperFeatures = new ArrayList();
+	private ArrayList surfaceMainFeatures = new ArrayList();
+    //private FeatureCollection<SimpleFeatureType, SimpleFeature> collection = null;
+    //private SimpleFeatureCollection areaHelperCollection = null;
+    //private SimpleFeatureCollection surfaceMainCollection = null;
 
+    private Transaction t = null;
+    
 
     public IliReader(String itf, String epsg, HashMap params) throws IllegalArgumentException, IOException, ClassNotFoundException, SQLException, Exception 
     {
@@ -147,13 +154,16 @@ public class IliReader {
         compileModel();
         
         // delete existing pg schema and create new ones
-        //deletePostgresSchemaAndTables();
-        //createPostgresSchemaAndTables();
+        deletePostgresSchemaAndTables();
+        createPostgresSchemaAndTables();
     }
     
-    
+        
     public void read() throws IoxException 
     {    	    	
+    	logger.debug( "Starting Transaction..." );
+    	t = new DefaultTransaction();
+    	
     	featureTypes = GTUtils.getFeatureTypesFromItfTransferViewables( iliTd, this.epsg );
 
     	ioxReader = new ch.interlis.iom_j.itf.ItfReader( new java.io.File( this.itfFileName ) );
@@ -175,7 +185,7 @@ public class IliReader {
     			IomObject iomObj = ((ObjectEvent)event).getIomObject();
     			String tag = iomObj.getobjecttag();
     			
-    			logger.debug("tag: " + tag);
+    			//logger.debug("tag: " + tag);
     			readObject( iomObj, tag );
     			
     			//if ( tag.equalsIgnoreCase(featureName) ) 
@@ -197,8 +207,8 @@ public class IliReader {
     		{
     			ioxReader.close();
 
-    			// Letzte Tabelle muss noch abgehandelt werden.    				
-    			//this.writeToPostgis();
+    			// write last table to postgis		
+    			this.writeToPostgis();
 
     			break;
     		}
@@ -214,7 +224,29 @@ public class IliReader {
     		}
     	}                                               
 
-    	
+    	logger.debug("Committing Transaction...");
+    	try 
+    	{
+        	try 
+        	{
+        		t.commit();
+        	} 
+        	catch ( IOException ex ) 
+        	{
+        		logger.error( "Cannot commit transaction." );
+        		logger.error( ex.getMessage() );
+        		ex.printStackTrace();
+        		
+        		t.rollback();
+        	} 
+        	finally 
+        	{
+        		t.close();
+        	}
+    	} catch ( IOException ex ) 
+    	{
+    		logger.error( ex.getMessage() );
+    	}
     }
     
     
@@ -226,14 +258,16 @@ public class IliReader {
     	{
     		if (features != null) 
     		{	
-    			logger.debug("ich schreibe...");
-    			//this.writeToPostgis();
+    			SimpleFeatureCollection fc = DataUtilities.collection( features );
+    			logger.debug("ich schreibe... " + fc.getSchema().getTypeName() + " | Grösse: " + fc.size());
+    			writeToPostgis();
     		}
     		//collection = FeatureCollections.newCollection(featureName);
+    		//collection = DataUtilities.collection( new ArrayList() );
     		features = new ArrayList();
     	}
     	
-    	logger.debug("Feature: " + tag);
+    	//logger.debug("Feature: " + tag);
     	SimpleFeatureType ft = (SimpleFeatureType) featureTypes.get( tag );
     	if ( ft != null ) 
     	{	
@@ -258,8 +292,7 @@ public class IliReader {
     					AttributeDef attr = (AttributeDef) obj.obj;
     					Type type = attr.getDomainResolvingAliases();                          
     					String attrName = attr.getName();
-    					
-    					logger.debug("attrName (AbstractClassDef): " + attrName);
+    					//logger.debug("attrName (AbstractClassDef): " + attrName);
 
     					// what is this good for?
     					if (type instanceof CompositionType) 
@@ -284,61 +317,93 @@ public class IliReader {
             					featBuilder.set(attrName.toLowerCase(), null);
             				}
             			}
-    					else if (type instanceof SurfaceType) 
+    					else if ( type instanceof SurfaceType ) 
     					{        				
            					isSurfaceMain = true;
     						geomName = attrName.toLowerCase();
            				}
-    					
-    					/*
-    					if ( type instanceof SurfaceType ) 
-    					{  
-    						String fkName = ch.interlis.iom_j.itf.ModelUtilities.getHelperTableMainTableRef( attr );
-    						IomObject structvalue = iomObj.getattrobj( fkName, 0 );
-    						IomObject value = iomObj.getattrobj( ch.interlis.iom_j.itf.ModelUtilities.getHelperTableGeomAttrName( attr ), 0 );
-
-    					}  
-    					else if ( type instanceof PolylineType ) 
+    					else if ( type instanceof AreaType )
     					{
-    						IomObject value = iomObj.getattrobj( attrName, 0 );
-
+    						isAreaMain = true;
+        					IomObject value = iomObj.getattrobj( attrName, 0 );
+        					try 
+        					{
+        						Point point = new GeometryFactory().createPoint(Iox2jts.coord2JTS( value ) );
+        						//point.setSRID( Integer.parseInt(this.epsg) ); 
+        						featBuilder.set( attrName.toLowerCase() + "_point", point );
+        						geomName = attrName.toLowerCase();
+        					} 
+        					catch ( Iox2jtsException e ) {
+        						e.printStackTrace();
+        						logger.warn( e.getMessage() );
+        					}
+    					}
+    					else if ( type instanceof CoordType ) 
+    					{
+            				IomObject value = iomObj.getattrobj( attrName, 0 );
+            				if( value != null )
+            				{
+            					if( !value.getobjecttag().equals("COORD") )
+            					{
+            						logger.warn("object tag <> COORD");
+            					} 
+            					else 
+            					{
+            						try 
+            						{
+            							Point point = new GeometryFactory().createPoint( Iox2jts.coord2JTS(value ) );
+            							featBuilder.set( attrName.toLowerCase(), point );
+            						} catch ( Iox2jtsException e ) 
+            						{
+            							e.printStackTrace();
+                						logger.warn( e.getMessage() );
+            						}                                                       
+            					}
+            				}
+            			}
+    					else if ( type instanceof NumericType ) 
+    					{
+            				String value = iomObj.getattrvalue( attrName );            				
+            				if ( value != null ) 
+            				{
+            					featBuilder.set( attrName.toLowerCase(), Double.valueOf(value) );
+            				} else 
+            				{
+            					featBuilder.set( attrName.toLowerCase(), null );
+            				}
+            			}
+    					else if ( type instanceof EnumerationType ) 
+    					{
+            				String value = iomObj.getattrvalue(attrName);
+            				if ( value != null ) 
+            				{
+            					featBuilder.set( attrName.toLowerCase(), Integer.valueOf( value ) );
+            					if ( true == true ) {
+            						featBuilder.set( attrName.toLowerCase()+"_txt", enumCodeMapper.mapItfCode2XtfCode( (EnumerationType) type, value ) );
+            					}
+            				} else {
+            					featBuilder.set( attrName.toLowerCase(), null );
+            					if ( true == true ) {
+            						featBuilder.set( attrName.toLowerCase()+"_txt", null );
+            					}
+            				}
+            			} 
+    					else 
+    					{
+    						String value = iomObj.getattrvalue(attrName);
     						if ( value != null ) 
     						{
-    							try 
-    							{
-    								IomObject polyObj = freeFrame.transformPolyline(value);                                                                                                                                 
-    								iomObj.changeattrobj(attrName, 0, polyObj);                                                     
-    							} 
-    							catch ( Exception e ) 
-    							{
-    								e.printStackTrace();
-    							}
-    						}       
-    					} 
-    					else if ( type instanceof CoordType || type instanceof AreaType ) 
-    					{
-    						IomObject value = iomObj.getattrobj(attrName, 0);
-    						logger.debug( value );
-
-    						if ( value != null ) 
-    						{
-    							try 
-    							{
-    								IomObject pointObj = freeFrame.transformPoint(value);
-    								iomObj.changeattrobj(attrName, 0, pointObj);
-    							} 
-    							catch ( Exception e ) 
-    							{
-    								e.printStackTrace();
-    							}
+    							featBuilder.set( attrName.toLowerCase(), value );
+    						} else {
+    							featBuilder.set( attrName.toLowerCase(), null );
     						}
-    					} */
+    					} 
     				}
     				if ( obj.obj instanceof RoleDef ) 
     				{
     	    			RoleDef role = (RoleDef) obj.obj;
     	    			String roleName = role.getName();
-    	    			logger.debug("roleName: " + roleName);
+    	    			//logger.debug("roleName: " + roleName);
 
     	    			IomObject structvalue = iomObj.getattrobj( roleName, 0 );
     	    			String refoid = structvalue.getobjectrefoid();
@@ -347,10 +412,10 @@ public class IliReader {
     	    		}
     			}
     		}
-			else if (tableObj instanceof LocalAttribute) {                  
+			else if ( tableObj instanceof LocalAttribute ) 
+			{                  
 				LocalAttribute localAttr = (LocalAttribute) tag2class.get( iomObj.getobjecttag() );        
 				Type type = localAttr.getDomainResolvingAliases();                      
-
 				//logger.debug("LocalAttr: " + localAttr.toString());
 				
 				if ( type instanceof SurfaceType )
@@ -373,6 +438,7 @@ public class IliReader {
         					featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, 0.02 ) );
     					} else {
         					featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, maxOverlaps.doubleValue() ) );
+    						featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, 0.001 ) );
     					}
     				}
 				} 
@@ -394,14 +460,166 @@ public class IliReader {
 						{
 							featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts(value, 0.02));
 						} else {
-							featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts(value, maxOverlaps.doubleValue()));
+//							featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts(value, maxOverlaps.doubleValue()));
+    						featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, 0.001 ) );
 						}
 					}                                                               
 				}				
 			}
-        	SimpleFeature feature = featBuilder.buildFeature(null);	        	
+        	SimpleFeature feature = featBuilder.buildFeature( null );
+        	//logger.info( feature.toString() );
         	features.add(feature);
     	}  	
+    }
+    
+       
+    private void writeToPostgis() 
+    {
+		if ( isAreaHelper == true ) 
+		{
+			areaHelperFeatures.addAll( features );
+			
+			isAreaHelper = false;
+		}
+		else if ( isAreaMain == true ) 
+		{
+			if ( areaHelperFeatures == null ) 
+			{
+				SimpleFeatureCollection collection = DataUtilities.collection( features );
+				writeToPostgis( collection, featureName );
+			} 
+			else 
+			{
+				if ( areaHelperFeatures.size() == 0 ) 
+				{
+					SimpleFeatureCollection collection = DataUtilities.collection( features );
+					writeToPostgis( collection, featureName );
+				} else 
+				{
+					SimpleFeatureCollection areaHelperCollection = DataUtilities.collection( areaHelperFeatures );
+					SimpleFeatureCollection collection = DataUtilities.collection( features );
+    				SimpleFeatureCollection areaCollection = SurfaceAreaBuilder.buildArea( collection, areaHelperCollection );
+    				
+    				writeToPostgis( areaCollection, featureName );
+    				areaHelperFeatures.clear();
+				}
+			}
+
+			isAreaHelper = false;
+			isAreaMain = false;
+		}
+		else if ( isSurfaceMain == true ) 
+		{
+			// Problem bei zwei aufeinanderfolgenden Surface-Tabellen.
+			// Falls die erste KEINE Geometrie hat (keine Helper-Tabelle),
+			// wird sie nicht in die DB geschrieben.
+			// Wurde sie geschrieben, sollte die Anzahl = 0 sein.
+			// Falls ungleich 0 -> in die DB schreiben.
+			
+			try 
+			{
+				SimpleFeatureCollection surfaceMainCollection = DataUtilities.collection( surfaceMainFeatures );
+				
+				writeToPostgis( surfaceMainCollection, surfaceMainFeatureName );
+				surfaceMainFeatures.clear();
+				
+			} catch ( NullPointerException e ) 
+			{
+				System.err.println("surfaceMainCollection keine features");
+				logger.warn( "no features in surfaceMainCollection" );
+			}
+			surfaceMainFeatures.addAll( features );
+			
+			surfaceMainFeatureName = featureName;
+			isSurfaceMain = false;
+		}
+		else if ( isSurfaceHelper == true ) 
+		{
+			SimpleFeatureCollection surfaceMainCollection = DataUtilities.collection( surfaceMainFeatures );
+			SimpleFeatureCollection collection = DataUtilities.collection( features );
+			SimpleFeatureCollection coll = SurfaceAreaBuilder.buildSurface( surfaceMainCollection, collection );
+			
+			writeToPostgis( coll, surfaceMainFeatureName );
+			
+			isSurfaceHelper = false;
+			isSurfaceMain = false;
+		}
+		else 
+		{
+			logger.debug("writeToPostgis: " + featureName);
+			SimpleFeatureCollection collection = DataUtilities.collection( features );
+			writeToPostgis(collection, featureName);
+		
+			// BRAUCHE ICH DAS JETZT NOCH????? (siehe oben)
+			
+			// Falls keine Geometrie zur Surface Main Table
+			// wird isSurfaceHelper nie true, somit
+			// gibts die surfaceMainCollection immer noch und
+			// sie muss noch in die DB geschrieben werden.
+//			System.out.println("*1");
+			if ( surfaceMainFeatures != null ) 
+			{ 
+				if ( surfaceMainFeatures.size() > 0 ) 
+				{
+//					System.out.println("*2");				
+					//this.writeToPostgis(surfaceMainCollection, surfaceMainFeatureName);
+					//surfaceMainCollection.clear();
+				}
+			}
+		}
+		features.clear();
+	}
+    
+
+    private void writeToPostgis( SimpleFeatureCollection collection, String featureName )
+    {
+    	try 
+    	{
+    		Map params= new HashMap();
+    		params.put( "dbtype", "postgis" );        
+    		params.put( "host", this.dbhost );        
+    		params.put( "port", this.dbport );  
+    		params.put( "database", this.dbname ); 
+    		params.put( "schema", this.dbschema );
+    		params.put( "user", this.dbadmin );        
+    		params.put( "passwd", this.dbadminpwd ); 
+    		params.put( PostgisNGDataStoreFactory.VALIDATECONN, true );
+    		params.put( PostgisNGDataStoreFactory.MAX_OPEN_PREPARED_STATEMENTS, 100 );
+    		params.put( PostgisNGDataStoreFactory.LOOSEBBOX, true );
+    		params.put( PostgisNGDataStoreFactory.PREPARED_STATEMENTS, true );
+
+    		DataStore datastore = new PostgisNGDataStoreFactory().createDataStore( params );
+
+    		String tableName = ( featureName.substring( featureName.indexOf(".") + 1 ) ).replace( ".", "_" ).toLowerCase();
+
+    		try {
+    			FeatureSource<SimpleFeatureType, SimpleFeature> source = datastore.getFeatureSource( tableName );
+    			FeatureStore<SimpleFeatureType, SimpleFeature> store = (FeatureStore<SimpleFeatureType, SimpleFeature>) source;
+
+    			store.setTransaction(t);
+
+    			try {    				
+    				logger.debug("Add features: " + featureName);
+    				store.addFeatures(collection);
+
+    			} catch ( IOException ex ) {
+    				ex.printStackTrace();
+        			logger.error( ex.getMessage() );
+    			}
+    		} 
+    		catch ( IOException ex ) {
+    			ex.printStackTrace();
+    			logger.error( "Table \"" + tableName + "\" not found." );
+    			logger.error( ex.getMessage() );
+    		}
+
+    		datastore.dispose();
+
+    	} catch ( IOException ex ) 
+    	{
+    		ex.printStackTrace();
+			logger.error( ex.getMessage() );
+    	} 
     }
     
     
