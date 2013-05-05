@@ -46,7 +46,7 @@ public class App
 			
 			// import itf
 			//String itf = "data/ch_252400.itf";
-			String itf = "data/ch_252400.itf";
+			String itf = "../../data/ch_252400.itf";
 			IliReader iliReader = new IliReader( itf, "21781", params );
 			iliReader.read();
 			
