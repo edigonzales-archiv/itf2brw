@@ -16,3 +16,36 @@ GRANT SELECT ON TABLE geometry_columns TO mspublic;
 GRANT ALL ON TABLE geography_columns TO stefan;
 GRANT SELECT ON TABLE geography_columns TO mspublic;
 
+
+
+SELECT  a.art, a.art_txt, sum(ST_Area(b.geometrie)) as flaeche
+FROM
+dm01avch24d.bodenbedeckung_boflaeche as a,
+(
+ SELECT 1 as ogc_fid, ST_PointOnSurface(a.geom) as point, a.geom as geometrie
+ FROM
+ (
+  SELECT 1 as ogc_fid, (ST_Dump(ST_Intersection(a.geometrie, b.geometrie))).geom
+  FROM 
+  dm01avch24d.bodenbedeckung_boflaeche as a,
+  (
+   SELECT c.*, b.nummer, b.egris_egrid, b.nbident 
+   FROM dm01avch24d.liegenschaften_grundstueck as b, dm01avch24d.liegenschaften_liegenschaft as c
+   WHERE c.liegenschaft_von = b.tid
+  ) as b
+  WHERE a.gem_bfs = b.gem_bfs
+  AND ST_Intersects(b.geometrie, a.geometrie)
+  AND b.gem_bfs = %bfsnr%
+  AND b.nummer = '%nummer%'
+  AND b.nbident = '%nbident%'
+ ) as a
+ WHERE geometrytype(a.geom) = 'POLYGON' AND ST_isValid(a.geom)
+) as b
+WHERE a.gem_bfs = %bfsnr%
+AND a.geometrie && b.geometrie
+AND ST_Distance(a.geometrie, b.point) = 0
+GROUP BY art, art_txt
+ORDER BY art
+
+regexp:
+^[\w]+$
