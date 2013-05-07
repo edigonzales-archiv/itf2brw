@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.catais.brw.utils.IOUtils;
 import org.catais.brw.utils.ReadProperties;
+import org.catais.brw.checks.Grundstuecksbeschreibung;
 import org.catais.brw.interlis.*;
 
 import ch.interlis.ili2c.Ili2cException;
@@ -48,7 +49,13 @@ public class App
 			//String itf = "data/ch_252400.itf";
 			String itf = "../../data/ch_252400.itf";
 			IliReader iliReader = new IliReader( itf, "21781", params );
-			iliReader.read();
+			//iliReader.read();
+			
+			// Checks
+			// Verschnitt BB-LS (Grundstücksbeschreibung)
+			Grundstuecksbeschreibung be = new Grundstuecksbeschreibung( params );
+			
+			
 			
 			System.out.println ("should not reach here in case of errors.." );
 
