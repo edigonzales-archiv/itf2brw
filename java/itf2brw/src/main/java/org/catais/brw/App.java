@@ -54,7 +54,7 @@ public class App
 			// Checks
 			// Verschnitt BB-LS (Grundstücksbeschreibung)
 			Grundstuecksbeschreibung be = new Grundstuecksbeschreibung( params );
-			
+			be.run();
 			
 			
 			System.out.println ("should not reach here in case of errors.." );

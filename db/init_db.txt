@@ -1,13 +1,16 @@
 sudo su postgres
 
+CREATE ROLE stefan CREATEDB LOGIN PASSWORD 'ziegler12';
+CREATE ROLE mspublic LOGIN PASSWORD 'mspublic';
+
 createdb --owner stefan brwso
 createlang plpgsql brwso
 
 ALTER SCHEMA public OWNER TO stefan;
 
-psql -d brwso -f /usr/share/postgresql/8.4/contrib/postgis-2.0/postgis.sql
-psql -d brwso -f /usr/share/postgresql/8.4/contrib/postgis-2.0/spatial_ref_sys.sql 
-psql -d brwso -f /usr/share/postgresql/8.4/contrib/postgis-2.0/postgis_comments.sql
+psql -d brwso -f /usr/share/postgresql/9.1/contrib/postgis-2.0/postgis.sql
+psql -d brwso -f /usr/share/postgresql/9.1/contrib/postgis-2.0/spatial_ref_sys.sql 
+psql -d brwso -f /usr/share/postgresql/9.1/contrib/postgis-2.0/postgis_comments.sql
 
 
 GRANT ALL ON TABLE geometry_columns TO stefan;
