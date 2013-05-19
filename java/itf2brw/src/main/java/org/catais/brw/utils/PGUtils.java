@@ -387,6 +387,13 @@ public class PGUtils {
 										}
 	                                }
 									
+									if ( true )
+									{
+										tables.append( " gem_bfs INTEGER,\n" );
+										tables.append( " los INTEGER,\n" );
+										tables.append( " lieferdatum DATE,\n" );
+									}
+									
 									tables.deleteCharAt(tables.length()-2);
 									tables.append(")\n");
 									tables.append("WITH (OIDS=FALSE);\n");
@@ -402,6 +409,20 @@ public class PGUtils {
 										tables.append("  USING btree\n");
 										tables.append("  ("+btree_idx.get(i)+");\n\n");	
 									}
+									
+									if ( true )
+									{
+										tables.append("CREATE INDEX idx_" + tableName + "_gem_bfs\n");
+										tables.append("  ON "+schema+"."+tableName+"\n");
+										tables.append("  USING btree\n");
+										tables.append("  (gem_bfs);\n\n");	
+										
+										tables.append("CREATE INDEX idx_" + tableName + "_los\n");
+										tables.append("  ON "+schema+"."+tableName+"\n");
+										tables.append("  USING btree\n");
+										tables.append("  (los);\n\n");	
+									}
+									
 
 									// Geometrie Index schreiben und in 
 									// geometry_columns schreiben

@@ -1,35 +1,25 @@
-2013-05-08 16:15:53 org.catais.brw.App [INFO] Start: Wed May 08 16:15:53 CEST 2013
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbhost: localhost
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbport: 5432
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbname: brwso
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbschema: baaa
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbuser: mspublic
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbpwd: mspublic
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbadmin: stefan
-2013-05-08 16:15:53 org.catais.brw.utils.ReadProperties [DEBUG] dbadminpwd: ziegler12
-2013-05-08 16:15:53 org.catais.brw.App [DEBUG] {dbschema=baaa, dbadmin=stefan, dbhost=localhost, dbport=5432, dbname=brwso, dbpwd=mspublic, srcdir=/home/stefan/tmp/brw/test/, dbadminpwd=ziegler12, dbuser=mspublic}
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbhost: localhost
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbport: 5432
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbport: brwso
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbschema: baaa
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbuser: mspublic
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbpwd: mspublic
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbadmin: stefan
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] dbadminpwd: ziegler12
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] srcdir: /home/stefan/tmp/brw/test/
-2013-05-08 16:15:53 org.catais.brw.interlis.IliReader [DEBUG] Interlis model name: DM01AVCH24D
-2013-05-08 16:15:54 org.catais.brw.interlis.IliReader [DEBUG] interlis model compiled
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] dbhost: localhost
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] dbport: 5432
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] dbport: brwso
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] dbschema: baaa
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] dbuser: mspublic
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] dbpwd: mspublic
-2013-05-08 16:15:54 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] SELECT  a.art, a.art_txt, sum(ST_Area(b.geometrie)) as flaeche FROM baaa.bodenbedeckung_boflaeche as a, (  SELECT 1 as ogc_fid, ST_PointOnSurface(a.geom) as point, a.geom as geometrie   FROM  (   SELECT 1 as ogc_fid, (ST_Dump(ST_Intersection(a.geometrie, b.geometrie))).geom   FROM baaa.bodenbedeckung_boflaeche as a,   (    SELECT c.*, b.nummer, b.egris_egrid, b.nbident    FROM baaa.liegenschaften_grundstueck as b, baaa.liegenschaften_liegenschaft as c    WHERE c.liegenschaft_von = b.tid   ) as b   WHERE ST_Intersects(b.geometrie, a.geometrie)   AND b.nummer = '%nummer%'   AND b.nbident = '%nbident%'  ) as a  WHERE geometrytype(a.geom) = 'POLYGON' AND ST_isValid(a.geom) ) as b WHERE a.geometrie && b.geometrie AND ST_Distance(a.geometrie, b.point) = 0 GROUP BY art, art_txt ORDER BY art 
-2013-05-08 16:15:55 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] 4
-2013-05-08 16:15:55 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] befestigt.Strasse_Weg15.522351985293607
-2013-05-08 16:15:55 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] humusiert.Acker_Wiese_Weide17950.65181461539
-2013-05-08 16:15:55 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] Gewaesser.fliessendes28.054482244576946
-2013-05-08 16:15:55 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] bestockt.geschlossener_Wald19.52425115718001
-2013-05-08 16:15:55 org.catais.brw.checks.Grundstuecksbeschreibung [DEBUG] 94
-2013-05-08 16:15:55 org.catais.brw.App [INFO] Ende: Wed May 08 16:15:55 CEST 2013
+2013-05-19 17:31:03 org.catais.brw.App [INFO] Start: Sun May 19 17:31:03 CEST 2013
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbhost: localhost
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbport: 5432
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbname: rosebud2
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbschema: av_dm01avch24d_lv95
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbuser: mspublic
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbpwd: mspublic
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbadmin: stefan
+2013-05-19 17:31:03 org.catais.brw.utils.ReadProperties [DEBUG] dbadminpwd: ziegler12
+2013-05-19 17:31:03 org.catais.brw.App [DEBUG] {dbschema=av_dm01avch24d_lv95, frame=LV03, dbadmin=stefan, dbhost=localhost, dbport=5432, dbname=rosebud2, dbpwd=mspublic, srcdir=/home/stefan/tmp/itf_lv03_tmp/, dbadminpwd=ziegler12, dbuser=mspublic}
+2013-05-19 17:31:03 org.catais.brw.App [DEBUG] LV03
+2013-05-19 17:31:03 org.catais.brw.App [DEBUG] else
+2013-05-19 17:31:03 org.catais.brw.App [DEBUG] 2586 0
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbhost: localhost
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbport: 5432
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbport: rosebud2
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbschema: av_dm01avch24d_lv95
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbuser: mspublic
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbpwd: mspublic
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbadmin: stefan
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] dbadminpwd: ziegler12
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] srcdir: /home/stefan/tmp/itf_lv03_tmp/
+2013-05-19 17:31:03 org.catais.brw.interlis.IliReader [DEBUG] Interlis model name: DM01AVCH24D
+2013-05-19 17:31:04 org.catais.brw.interlis.IliReader [DEBUG] interlis model compiled
+2013-05-19 17:31:04 org.catais.brw.App [INFO] Ende: Sun May 19 17:31:04 CEST 2013

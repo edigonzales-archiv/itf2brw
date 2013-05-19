@@ -102,6 +102,7 @@ public class IliReader {
     private Boolean isSurfaceMain = false;
     private String geomName = null;
     private int tableNumber = 0;
+    private String prefix = null;
 	
 	private HashMap params = null;
 
@@ -156,19 +157,21 @@ public class IliReader {
         // delete existing pg schema and create new ones
         //deletePostgresSchemaAndTables();
         //createPostgresSchemaAndTables();
+        
+        // get all feature types
+        featureTypes = GTUtils.getFeatureTypesFromItfTransferViewables( iliTd, this.epsg );
+        
     }
     
         
-    public void read() throws IoxException 
+    public void read( int gem_bfs, int los ) throws IoxException 
     {    	    	
     	logger.debug( "Starting Transaction..." );
     	t = new DefaultTransaction();
     	
-    	featureTypes = GTUtils.getFeatureTypesFromItfTransferViewables( iliTd, this.epsg );
-
     	ioxReader = new ch.interlis.iom_j.itf.ItfReader( new java.io.File( this.itfFileName ) );
     	((ItfReader) ioxReader).setModel( iliTd );
-    	((ItfReader) ioxReader).setRenumberTids( false );
+    	((ItfReader) ioxReader).setRenumberTids( true );
     	((ItfReader) ioxReader).setReadEnumValAsItfCode( true );
 
     	IoxEvent event = ioxReader.read();
@@ -186,7 +189,7 @@ public class IliReader {
     			String tag = iomObj.getobjecttag();
     			
     			//logger.debug("tag: " + tag);
-    			readObject( iomObj, tag );
+    			readObject( iomObj, tag, gem_bfs, los );
     			
     			//if ( tag.equalsIgnoreCase(featureName) ) 
     			//{
@@ -250,12 +253,13 @@ public class IliReader {
     }
     
     
-    private void readObject( IomObject iomObj, String featureName ) 
+    private void readObject( IomObject iomObj, String featureName, int gem_bfs, int los ) 
     {
     	String tag=iomObj.getobjecttag();
+    	//logger.debug(iomObj.getobjectline());
 
     	if ( !featureName.equalsIgnoreCase(this.featureName) ) 
-    	{
+    	{    		
     		if (features != null) 
     		{	
     			SimpleFeatureCollection fc = DataUtilities.collection( features );
@@ -273,7 +277,15 @@ public class IliReader {
     	{	
     		SimpleFeatureBuilder featBuilder = new SimpleFeatureBuilder( ft );	
 
-    		String tid = iomObj.getobjectoid();
+    		String tid = null;
+    		if( ((ItfReader) ioxReader).isRenumberTids() ) 
+    		{
+    			tid = getTidOrRef(iomObj.getobjectoid());
+    		} 
+    		else 
+    		{
+    			tid = iomObj.getobjectoid();
+    		}
     		featBuilder.set("tid", tid);
 
     		Object tableObj = tag2class.get( iomObj.getobjecttag() );          
@@ -406,8 +418,17 @@ public class IliReader {
     	    			//logger.debug("roleName: " + roleName);
 
     	    			IomObject structvalue = iomObj.getattrobj( roleName, 0 );
-    	    			String refoid = structvalue.getobjectrefoid();
-    
+    	    			String refoid = "";
+    	    			if (structvalue != null) 
+    	    			{
+    	    				if ( ((ItfReader) ioxReader).isRenumberTids() ) 
+    	    				{
+    	    					refoid = getTidOrRef(structvalue.getobjectrefoid());
+    	    				} else 
+    	    				{
+    	    					refoid = structvalue.getobjectrefoid();
+    	    				}
+    	    			}
     	    			featBuilder.set( roleName.toLowerCase(), refoid.toString() );
     	    		}
     			}
@@ -425,8 +446,15 @@ public class IliReader {
 					
 					String fkName = ch.interlis.iom_j.itf.ModelUtilities.getHelperTableMainTableRef( localAttr );
 					IomObject structvalue=iomObj.getattrobj( fkName, 0 );
-					String refoid = structvalue.getobjectrefoid();
-		
+					String refoid = null;
+					if ( ((ItfReader) ioxReader).isRenumberTids() ) 
+					{
+						refoid = getTidOrRef(structvalue.getobjectrefoid());
+					} 
+					else 
+					{
+						refoid = structvalue.getobjectrefoid();
+					}		
 					featBuilder.set("_itf_ref", refoid);
 					
     				IomObject value = iomObj.getattrobj( ch.interlis.iom_j.itf.ModelUtilities.getHelperTableGeomAttrName( localAttr ), 0 );
@@ -437,7 +465,7 @@ public class IliReader {
     					{
         					featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, 0.02 ) );
     					} else {
-        					featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, maxOverlaps.doubleValue() ) );
+        					//featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, maxOverlaps.doubleValue() ) );
     						featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, 0.001 ) );
     					}
     				}
@@ -460,21 +488,95 @@ public class IliReader {
 						{
 							featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts(value, 0.02));
 						} else {
-//							featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts(value, maxOverlaps.doubleValue()));
+							//featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts(value, maxOverlaps.doubleValue()));
     						featBuilder.set(localAttr.getName().toLowerCase(), Iox2wkt.polyline2jts( value, 0.001 ) );
 						}
 					}                                                               
 				}				
 			}
+    		featBuilder.set( "gem_bfs", gem_bfs );
+    		featBuilder.set( "los", los );
+    		featBuilder.set( "lieferdatum", new Date() );
+    		
         	SimpleFeature feature = featBuilder.buildFeature( null );
         	//logger.info( feature.toString() );
         	features.add(feature);
     	}  	
     }
     
+    
+    public void delete(int gem_bfs, int los) 
+    {
+    	try 
+    	{
+    		Map params= new HashMap();
+    		params.put( "dbtype", "postgis" );        
+    		params.put( "host", this.dbhost );        
+    		params.put( "port", this.dbport );  
+    		params.put( "database", this.dbname ); 
+    		params.put( "schema", this.dbschema );
+    		params.put( "user", this.dbadmin );        
+    		params.put( "passwd", this.dbadminpwd ); 
+    		params.put( PostgisNGDataStoreFactory.VALIDATECONN, true );
+    		params.put( PostgisNGDataStoreFactory.MAX_OPEN_PREPARED_STATEMENTS, 50 );
+    		params.put( PostgisNGDataStoreFactory.LOOSEBBOX, true );
+    		params.put( PostgisNGDataStoreFactory.PREPARED_STATEMENTS, true );
+
+    		DataStore datastore = new PostgisNGDataStoreFactory().createDataStore( params );
+
+    		Set keys = featureTypes.keySet();
+    		for ( Iterator it = keys.iterator(); it.hasNext(); )
+    		{
+    			String className = (String) it.next();
+    			String tableName = (className.substring(className.indexOf(".")+1)).replace(".", "_").toLowerCase();
+
+    			// workaround!!
+    			String[] num = tableName.split("_");
+    			if ( num.length > 2 )
+    			{
+    				continue;
+    			}
+    			
+    			logger.debug("Deleting data from " + tableName + " (" + gem_bfs + ", " + los + ")");
+
+    			try {
+    				FeatureSource<SimpleFeatureType, SimpleFeature> source = datastore.getFeatureSource( tableName );
+    				FeatureStore<SimpleFeatureType, SimpleFeature> store = (FeatureStore<SimpleFeatureType, SimpleFeature>) source;
+
+
+    				FilterFactory ff = CommonFactoryFinder.getFilterFactory( null );
+    				Filter filter = null;
+
+    				Filter f1 = ff.equals( ff.property( "gem_bfs" ),  ff.literal( gem_bfs ));
+    				Filter f2 = ff.equals( ff.property( "los" ), ff.literal( los ));                            
+
+    				ArrayList filters = new ArrayList();
+    				filters.add(f1);
+    				filters.add(f2);
+    				filter = ff.and( filters );
+    				
+    				store.removeFeatures( filter );
+    			}
+    			catch ( IOException ex ) 
+    			{
+    				logger.error( ex.getMessage() );
+    				ex.printStackTrace();
+    			}
+    		}
+    		
+    		datastore.dispose();
+
+    	} catch ( IOException ex ) 
+    	{
+    		ex.printStackTrace();
+			logger.error( ex.getMessage() );
+    	} 
+    }
+    
        
     private void writeToPostgis() 
     {
+    	logger.debug("writeToPostgis");
 		if ( isAreaHelper == true ) 
 		{
 			areaHelperFeatures.addAll( features );
@@ -498,8 +600,10 @@ public class IliReader {
 				{
 					SimpleFeatureCollection areaHelperCollection = DataUtilities.collection( areaHelperFeatures );
 					SimpleFeatureCollection collection = DataUtilities.collection( features );
+					logger.debug("build area");
     				SimpleFeatureCollection areaCollection = SurfaceAreaBuilder.buildArea( collection, areaHelperCollection );
-    				
+					logger.debug("done");
+
     				writeToPostgis( areaCollection, featureName );
     				areaHelperFeatures.clear();
 				}
@@ -537,7 +641,9 @@ public class IliReader {
 		{
 			SimpleFeatureCollection surfaceMainCollection = DataUtilities.collection( surfaceMainFeatures );
 			SimpleFeatureCollection collection = DataUtilities.collection( features );
+			logger.debug("build surface");
 			SimpleFeatureCollection coll = SurfaceAreaBuilder.buildSurface( surfaceMainCollection, collection );
+			logger.debug("done");
 			
 			writeToPostgis( coll, surfaceMainFeatureName );
 			
@@ -584,7 +690,7 @@ public class IliReader {
     		params.put( "user", this.dbadmin );        
     		params.put( "passwd", this.dbadminpwd ); 
     		params.put( PostgisNGDataStoreFactory.VALIDATECONN, true );
-    		params.put( PostgisNGDataStoreFactory.MAX_OPEN_PREPARED_STATEMENTS, 100 );
+    		params.put( PostgisNGDataStoreFactory.MAX_OPEN_PREPARED_STATEMENTS, 50 );
     		params.put( PostgisNGDataStoreFactory.LOOSEBBOX, true );
     		params.put( PostgisNGDataStoreFactory.PREPARED_STATEMENTS, true );
 
@@ -605,12 +711,14 @@ public class IliReader {
     			} catch ( IOException ex ) {
     				ex.printStackTrace();
         			logger.error( ex.getMessage() );
+        			datastore.dispose();
     			}
     		} 
     		catch ( IOException ex ) {
     			ex.printStackTrace();
     			logger.error( "Table \"" + tableName + "\" not found." );
     			logger.error( ex.getMessage() );
+    			datastore.dispose();
     		}
 
     		datastore.dispose();
@@ -656,6 +764,33 @@ public class IliReader {
 		m = s.executeUpdate(buf.toString());
     	
 		logger.info("Schema and tables created.");
+    }
+    
+    
+    private String getTidOrRef( String oriTid ) 
+    {
+    	if ( this.prefix != null ) 
+    	{
+    		if ( this.prefix.length() > 0 ) 
+    		{
+    			int tidc = oriTid.length();
+    			for ( int i = 0 ; i < (8-tidc); i++) 
+    			{
+    				oriTid = "0" + oriTid ;
+    			}       
+    		}
+    	}
+    	if ( this.prefix == null ) 
+    	{
+    		prefix = ""; 
+    	}
+    	return this.prefix + oriTid;
+    }
+    
+    
+    public void setTidPrefix( String prefix ) 
+    {
+        this.prefix = prefix;
     }
     
     

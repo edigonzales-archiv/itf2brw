@@ -16,10 +16,10 @@ public class ReadProperties {
 	
 	String fileName = null;
 	
-    public ReadProperties() {
+    public ReadProperties( String fileName ) {
 		logger.setLevel(Level.DEBUG);
 		
-    	fileName = "itf2brw.properties";
+    	this.fileName = fileName;
     }
     
     public HashMap read() throws FileNotFoundException, IOException {    	
@@ -101,6 +101,14 @@ public class ReadProperties {
     		params.put("srcdir", srcdir.trim());
     	} else {
 			throw new IllegalArgumentException("'srcdir' parameter not set.");
+		}
+    	
+    	// reference frame
+    	String frame = properties.getProperty("frame");
+    	if (frame != null) {
+    		params.put("frame", frame.trim());
+    	} else {
+			throw new IllegalArgumentException("'frame' parameter not set.");
 		}
     	
     	return params;

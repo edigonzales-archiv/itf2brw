@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -15,6 +16,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
 import org.opengis.feature.simple.SimpleFeatureType;
+import org.geotools.referencing.crs.*;
 
 import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryCollection;
@@ -117,6 +119,13 @@ public class GTUtils {
 											typeBuilderRef.add("_itf_ref", String.class);
 											typeBuilderRef.add(name.toLowerCase(), LineString.class);
 									
+											if (true)
+											{
+												typeBuilderRef.add("gem_bfs", Integer.class);
+												typeBuilderRef.add("los", Integer.class);
+												typeBuilderRef.add("lieferdatum", Date.class);
+											}
+											
 											SimpleFeatureType featureTypeRef = typeBuilderRef.buildFeatureType();
 											ret.put(className + "_" + name, featureTypeRef);
 
@@ -141,6 +150,13 @@ public class GTUtils {
 											typeBuilderRef.add("_itf_ref", String.class);
 											typeBuilderRef.add(name.toLowerCase(), LineString.class);
 
+											if (true)
+											{
+												typeBuilderRef.add("gem_bfs", Integer.class);
+												typeBuilderRef.add("los", Integer.class);
+												typeBuilderRef.add("lieferdatum", Date.class);
+											}
+											
 											SimpleFeatureType featureTypeRef = typeBuilderRef.buildFeatureType();
 											ret.put(className + "_" + name, featureTypeRef);
 
@@ -175,6 +191,15 @@ public class GTUtils {
 										typeBuilder.add(roledefObj.getName().toLowerCase(), String.class);
 									}
 								}
+								
+								if (true)
+								{
+									typeBuilder.add("gem_bfs", Integer.class);
+									typeBuilder.add("los", Integer.class);
+									typeBuilder.add("lieferdatum", Date.class);
+								}
+								
+								
 								SimpleFeatureType featureType = typeBuilder.buildFeatureType();
 				
 								ret.put(className, featureType);

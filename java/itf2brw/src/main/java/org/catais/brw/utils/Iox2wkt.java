@@ -6,9 +6,10 @@ import java.io.StreamTokenizer;
 import java.io.StringReader;
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.geom.*;
-import com.vividsolutions.jts.geom.PrecisionModel;
 import com.vividsolutions.jts.precision.SimpleGeometryPrecisionReducer;
 
 import ch.interlis.ili2c.metamodel.*;
@@ -27,6 +28,7 @@ import ch.interlis.iox_j.jts.Jts2iox;
  */
 
 public class Iox2wkt {
+	private static Logger logger = Logger.getLogger( Iox2wkt.class );
 
 	private static final CoordinateList coords = new CoordinateList();
 
@@ -170,6 +172,7 @@ public class Iox2wkt {
 					Coordinate ptArc = new Coordinate(Double.valueOf(a1), Double.valueOf(a2));
 					Coordinate ptEnd = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
 
+					//logger.debug(ptStart.toString() + " " + ptArc.toString() + " " + ptEnd.toString());
 					interpolateArc(ptStart, ptArc, ptEnd, maxOverlaps);
 
 				} else {
@@ -267,12 +270,27 @@ public class Iox2wkt {
 		
 		// TEMPORARY:
 		//maxOverlaps = 0.002;
+		maxOverlaps = 0.0001;
 
+		LineSegment segment = new LineSegment( ptStart, ptEnd );
+		double dist = segment.distancePerpendicular( ptArc );
+		//logger.debug( "perpendicular distance: " + dist);
+		
+		// Abbruchkriterium Handgelenkt mal Pi...
+		if ( dist < maxOverlaps )
+		{
+			coords.add(ptEnd, false);      
+			return;
+		}
+		
+		
 		Coordinate center = getArcCenter(ptStart, ptArc, ptEnd);
+		//logger.debug("arc center: " + center.toString());
 
 		double cx = center.x; double cy = center.y;
 		double px = ptArc.x; double py = ptArc.y;
-		double r = Math.sqrt((cx-px)*(cx-px)+(cy-py)*(cy-py));      
+		double r = Math.sqrt((cx-px)*(cx-px)+(cy-py)*(cy-py)); 
+		//logger.debug("radius: " + r);
 
 		double myAlpha = 2.0*Math.acos(1.0-maxOverlaps/r);
 
