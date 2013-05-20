@@ -19,21 +19,28 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.CreationHelper;
 
 final OUTPUTDIR = "/home/stefan/tmp/"
-final EXCELFILENAME = "flaechenmass"
-final SHAPEFILENAME = "flaechenmass"
+final EXCELFILENAME = "lv03_lv95"
+final SHAPEFILENAME = "lv03_lv95"
 final date = new Date().format("yyyy-MM-dd")
 
 // create db connection and query
 pg = new PostGIS([schema: 'av_dm01avch24d_lv03', user: 'mspublic', password: 'mspublic'], 'rosebud2')
 
-sql = """SELECT b.nummer, b.nbident, ST_Area(a.geometrie) as flaeche, round(ST_Area(a.geometrie)::numeric, 0)::integer as flaeche_gerundet, a.flaechenmass,  (a.flaechenmass - round(ST_Area(a.geometrie)::numeric, 0)::integer)::integer as differenz, a.geometrie, a.gem_bfs, a.los, a.lieferdatum, current_date as datum FROM
-av_dm01avch24d_lv03.liegenschaften_liegenschaft as a, 
-av_dm01avch24d_lv03.liegenschaften_grundstueck as b
-WHERE a.liegenschaft_von = b.tid
-AND (a.flaechenmass - round(ST_Area(a.geometrie)::numeric, 0)::integer)::integer <> 0
-ORDER BY a.gem_bfs"""
-//AND (a.flaechenmass - round(ST_Area(a.geometrie)::numeric, 0)::integer)::integer <> 0
-//AND abs((a.flaechenmass - round(ST_Area(a.geometrie)::numeric, 0)::integer)::integer) > 1
+sql = """SELECT c.nummer, c.nbident, c.flaeche_gerundet as lv03_area, d.flaeche_gerundet as lv95_area, (d.flaeche_gerundet - c.flaeche_gerundet) as diff, c.geometrie, c.gem_bfs, c.los, c.lieferdatum, current_date as datum FROM
+(
+ SELECT b.nummer, b.nbident, ST_Area(a.geometrie) as flaeche, round(ST_Area(a.geometrie)::numeric, 0) as flaeche_gerundet, a.geometrie, a.gem_bfs, a.los, a.lieferdatum FROM
+ av_dm01avch24d_lv03.liegenschaften_liegenschaft as a, 
+ av_dm01avch24d_lv03.liegenschaften_grundstueck as b
+ WHERE a.liegenschaft_von = b.tid
+) as c,
+(
+ SELECT b.nummer, b.nbident, ST_Area(a.geometrie) as flaeche, round(ST_Area(a.geometrie)::numeric, 0) as flaeche_gerundet, a.gem_bfs, a.los, a.lieferdatum FROM
+ av_dm01avch24d_lv95.liegenschaften_liegenschaft as a, 
+ av_dm01avch24d_lv95.liegenschaften_grundstueck as b
+ WHERE a.liegenschaft_von = b.tid
+) as d
+WHERE c.nummer = d.nummer
+AND c.nbident = d.nbident"""
 
 layer = pg.addSqlQuery(SHAPEFILENAME + "_" + date, sql, new Field("geometrie", "Polygon", "EPSG:21781"), [])
 
@@ -41,6 +48,7 @@ layer = pg.addSqlQuery(SHAPEFILENAME + "_" + date, sql, new Field("geometrie", "
 Directory dir = new Directory(OUTPUTDIR)
 dir.add(layer)
 
+/*
 // create excel workbook
 XSSFWorkbook workbook = new XSSFWorkbook();
 XSSFSheet sheet = workbook.createSheet("flaechenvergleich_1");
@@ -119,4 +127,4 @@ catch ( e )
 // close db connection
 pg.close()
 
-
+*/
