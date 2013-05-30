@@ -87,7 +87,7 @@ public class SurfaceAreaBuilder {
 			}
 			finally 
 			{
-			     i.close();
+			     j.close();
 			}
 			
 			Iterator kt = lines.entrySet().iterator();
