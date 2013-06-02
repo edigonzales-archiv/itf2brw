@@ -60,10 +60,12 @@ public class SingleImportApp {
 			params.put( "dbschema", dbschema );
 			
 			// import itf
-			int gem_bfs = 2479;
-			String itf = "../../data/Daten_Niedergoe_030912.itf";
+			//int gem_bfs = 2479;
+			//String itf = "../../data/Daten_Niedergoe_030912.itf";
+			int gem_bfs = 3901;
+			String itf = "../../data/3901_20130523_dm01avch24d.itf";
 			IliReader iliReader = new IliReader( itf, "21781", params );
-			//iliReader.read( gem_bfs, 0 );
+			iliReader.read( gem_bfs, 0 );
 
 			// reindex tables
 			logger.info("Start Reindexing...");
@@ -78,8 +80,8 @@ public class SingleImportApp {
              logger.info("End Vacuum.");
              
              // Processs
-             Processes processes = new Processes();
-             processes.run();
+             //Processes processes = new Processes();
+             //processes.run();
 		
 			
 			System.out.println ("should not reach here in case of errors.." );

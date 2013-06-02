@@ -155,8 +155,8 @@ public class IliReader {
         compileModel();
         
         // delete existing pg schema and create new ones
-        //deletePostgresSchemaAndTables();
-        //createPostgresSchemaAndTables();
+        deletePostgresSchemaAndTables();
+        createPostgresSchemaAndTables();
         
         // get all feature types
         featureTypes = GTUtils.getFeatureTypesFromItfTransferViewables( iliTd, this.epsg );
