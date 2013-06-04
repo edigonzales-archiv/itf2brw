@@ -57,14 +57,18 @@ public class SingleImportApp {
 		    char prefix = alphabet.charAt( r.nextInt( alphabet.length() ) );
 			long milli = new Date().getTime();
 			String dbschema = prefix + Long.toString( milli );
-			params.put( "dbschema", dbschema );
+			//params.put( "dbschema", dbschema );
 			
 			// import itf
 			//int gem_bfs = 2479;
 			//String itf = "../../data/Daten_Niedergoe_030912.itf";
-			int gem_bfs = 3901;
-			String itf = "../../data/3901_20130523_dm01avch24d.itf";
+			//int gem_bfs = 3901;
+			//String itf = "../../data/3901_20130523_dm01avch24d.itf";
+
+			String itf = "../../data/ch_252400.itf";
+			int gem_bfs = 2524;
 			IliReader iliReader = new IliReader( itf, "21781", params );
+			iliReader.delete( gem_bfs, 0 );
 			iliReader.read( gem_bfs, 0 );
 
 			// reindex tables

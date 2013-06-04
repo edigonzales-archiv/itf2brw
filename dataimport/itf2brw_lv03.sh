@@ -1,5 +1,5 @@
 #!/bin/bash
-export JAVA_HOME=/usr/lib/jvm/java-6-oracle/
+export JAVA_HOME=/usr/lib/jvm/java-6-sun/
 echo "Java Home is $JAVA_HOME"
 
 export CLASSPATH=:./itf2brw.jar:$CLASSPATH

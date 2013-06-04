@@ -261,10 +261,13 @@ public class IliReader {
 
     	if ( !featureName.equalsIgnoreCase(this.featureName) ) 
     	{    		
+    		logger.debug("neu: " + featureName);
+    		logger.debug("alt: " + this.featureName);
+    		
     		if (features != null) 
     		{	
     			SimpleFeatureCollection fc = DataUtilities.collection( features );
-    			logger.debug("ich schreibe... " + fc.getSchema().getTypeName() + " | Grösse: " + fc.size());
+    			logger.debug("ich schreibe... fc: " + fc.getSchema().getTypeName() + " | Grösse: " + fc.size());
     			writeToPostgis();
     		}
     		//collection = FeatureCollections.newCollection(featureName);
@@ -577,7 +580,7 @@ public class IliReader {
        
     private void writeToPostgis() 
     {
-    	logger.debug("writeToPostgis");
+    	logger.debug("writeToPostgis (Geknorze.....)");
 		if ( isAreaHelper == true ) 
 		{
 			areaHelperFeatures.addAll( features );
@@ -615,6 +618,9 @@ public class IliReader {
 		}
 		else if ( isSurfaceMain == true ) 
 		{
+			
+			logger.debug("isSurfaceMain = true");
+			
 			// Problem bei zwei aufeinanderfolgenden Surface-Tabellen.
 			// Falls die erste KEINE Geometrie hat (keine Helper-Tabelle),
 			// wird sie nicht in die DB geschrieben.
@@ -624,6 +630,9 @@ public class IliReader {
 			try 
 			{
 				SimpleFeatureCollection surfaceMainCollection = DataUtilities.collection( surfaceMainFeatures );
+				
+				logger.debug("surfaceMainFeatureName: " + surfaceMainFeatureName );
+				logger.debug("featureName: " + featureName );
 				
 				writeToPostgis( surfaceMainCollection, surfaceMainFeatureName );
 				surfaceMainFeatures.clear();
@@ -640,6 +649,10 @@ public class IliReader {
 		}
 		else if ( isSurfaceHelper == true ) 
 		{
+			
+			logger.debug("isSurfaceHelper = true");
+
+			
 			SimpleFeatureCollection surfaceMainCollection = DataUtilities.collection( surfaceMainFeatures );
 			SimpleFeatureCollection collection = DataUtilities.collection( features );
 			logger.debug("build surface");
@@ -647,6 +660,7 @@ public class IliReader {
 			logger.debug("done");
 			
 			writeToPostgis( coll, surfaceMainFeatureName );
+			surfaceMainFeatures.clear();
 			
 			isSurfaceHelper = false;
 			isSurfaceMain = false;

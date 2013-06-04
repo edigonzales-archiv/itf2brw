@@ -1,516 +1,638 @@
-2013-05-31 20:08:41 org.catais.brw.App [INFO] Start: Fri May 31 20:08:41 CEST 2013
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbhost: localhost
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbport: 5432
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbname: rosebud2
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbschema: dddd
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbuser: mspublic
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbpwd: mspublic
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbadmin: stefan
-2013-05-31 20:08:41 org.catais.brw.utils.ReadProperties [DEBUG] dbadminpwd: ziegler12
-2013-05-31 20:08:41 org.catais.brw.App [DEBUG] {dbschema=dddd, frame=LV03, dbadmin=stefan, dbhost=localhost, dbport=5432, dbname=rosebud2, dbpwd=mspublic, srcdir=/home/stefan/tmp/itf_lv03_tmp/, dbadminpwd=ziegler12, dbuser=mspublic}
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbhost: localhost
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbport: 5432
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbport: rosebud2
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbschema: v1370023721460
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbuser: mspublic
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbpwd: mspublic
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbadmin: stefan
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] dbadminpwd: ziegler12
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] srcdir: /home/stefan/tmp/itf_lv03_tmp/
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] Interlis model name: DM01AVCH24D
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [DEBUG] interlis model compiled
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [INFO] Start deleting schema and tables...
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [INFO] Schema and tables deleted.
-2013-05-31 20:08:41 org.catais.brw.interlis.IliReader [INFO] Start creating schema and tables...
-2013-05-31 20:08:44 org.catais.brw.interlis.IliReader [INFO] Schema and tables created.
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] Starting Transaction...
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie1(oid itf0)...
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie1.HFP1Nachfuehrung | Grösse: 2
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [WARN] no features in surfaceMainCollection
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie1.HFP1Nachfuehrung_ Perimeter | Grösse: 1
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:08:45 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 2
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie1.HFP1Nachfuehrung
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie1.HFP1 | Grösse: 14
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie1.HFP1
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie1.HFP1
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie2(oid itf1)...
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie1.HFP1Pos | Grösse: 14
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie1.HFP1Pos
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie1.HFP1Pos
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung | Grösse: 1
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie1.HFP1Nachfuehrung
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung_ Perimeter | Grösse: 1
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:08:45 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 1
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie2.LFP2 | Grösse: 2
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie2.LFP2Pos | Grösse: 2
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie3(oid itf2)...
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol | Grösse: 2
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung | Grösse: 121
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung_ Perimeter | Grösse: 31
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:08:46 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 121
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:08:46 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2013-05-31 20:08:47 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.LFP3 | Grösse: 1970
-2013-05-31 20:08:47 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:47 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2013-05-31 20:08:47 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2013-05-31 20:08:50 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.LFP3Pos | Grösse: 1970
-2013-05-31 20:08:50 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:50 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2013-05-31 20:08:50 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2013-05-31 20:08:52 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol | Grösse: 1970
-2013-05-31 20:08:52 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:52 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2013-05-31 20:08:52 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.HFP3Nachfuehrung | Grösse: 1
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.HFP3 | Grösse: 61
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.HFP3
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.HFP3
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Bodenbedeckung(oid itf3)...
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.FixpunkteKategorie3.HFP3Pos | Grösse: 61
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.HFP3Pos
-2013-05-31 20:08:53 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.HFP3Pos
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.BBNachfuehrung | Grösse: 609
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.HFP3Nachfuehrung
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.BBNachfuehrung_ Perimeter | Grösse: 417
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:08:54 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 609
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:08:54 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2013-05-31 20:08:57 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche | Grösse: 138
-2013-05-31 20:08:57 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:08:57 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche_ Geometrie | Grösse: 138
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:09:00 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 138
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.ProjObjektname | Grösse: 18
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.ProjObjektname
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.ProjObjektname
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.ProjObjektnamePos | Grösse: 2
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.ProjObjektnamePos
-2013-05-31 20:09:00 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.ProjObjektnamePos
-2013-05-31 20:09:02 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie | Grösse: 59567
-2013-05-31 20:09:02 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:09:03 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.BoFlaeche | Grösse: 20152
-2013-05-31 20:09:03 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:09:03 org.catais.brw.interlis.IliReader [DEBUG] build area
-2013-05-31 20:09:27 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
-2013-05-31 20:09:33 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 20152
-2013-05-31 20:09:33 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:09:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.Objektname | Grösse: 268
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.Objektname
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.ObjektnamePos | Grösse: 225
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2013-05-31 20:10:45 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2013-05-31 20:10:46 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol | Grösse: 330
-2013-05-31 20:10:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:10:46 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2013-05-31 20:10:46 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2013-05-31 20:10:48 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.Einzelpunkt | Grösse: 81181
-2013-05-31 20:10:48 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:10:48 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.Einzelpunkt
-2013-05-31 20:10:48 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.Einzelpunkt
-2013-05-31 20:11:39 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Einzelobjekte(oid itf4)...
-2013-05-31 20:11:39 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bodenbedeckung.EinzelpunktPos | Grösse: 22635
-2013-05-31 20:11:39 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:11:39 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.EinzelpunktPos
-2013-05-31 20:11:39 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.EinzelpunktPos
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.EONachfuehrung | Grösse: 582
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.EONachfuehrung_ Perimeter | Grösse: 422
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:11:54 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 582
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:11:54 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2013-05-31 20:11:57 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Einzelobjekt | Grösse: 28905
-2013-05-31 20:11:57 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:11:57 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2013-05-31 20:11:57 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2013-05-31 20:12:12 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Flaechenelement | Grösse: 2492
-2013-05-31 20:12:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:12:12 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2013-05-31 20:12:15 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Flaechenelement_ Geometrie | Grösse: 3409
-2013-05-31 20:12:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:12:15 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:12:15 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 2492
-2013-05-31 20:12:15 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:12:15 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2013-05-31 20:12:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Linienelement | Grösse: 180298
-2013-05-31 20:12:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:12:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Linienelement
-2013-05-31 20:12:23 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
-2013-05-31 20:14:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.LinienelementSymbol | Grösse: 3
-2013-05-31 20:14:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.LinienelementSymbol
-2013-05-31 20:14:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.LinienelementSymbol
-2013-05-31 20:14:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Punktelement | Grösse: 3351
-2013-05-31 20:14:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Punktelement
-2013-05-31 20:14:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Punktelement
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Objektname | Grösse: 134
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Objektname
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Objektname
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.ObjektnamePos | Grösse: 134
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Objektnummer | Grösse: 122
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Objektnummer
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Objektnummer
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.ObjektnummerPos | Grösse: 122
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.ObjektnummerPos
-2013-05-31 20:14:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.ObjektnummerPos
-2013-05-31 20:14:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.Einzelpunkt | Grösse: 44574
-2013-05-31 20:14:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:14:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Einzelpunkt
-2013-05-31 20:14:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Einzelpunkt
-2013-05-31 20:15:00 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Hoehen(oid itf5)...
-2013-05-31 20:15:00 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Nomenklatur(oid itf6)...
-2013-05-31 20:15:00 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Einzelobjekte.EinzelpunktPos | Grösse: 12024
-2013-05-31 20:15:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:00 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.EinzelpunktPos
-2013-05-31 20:15:00 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.EinzelpunktPos
-2013-05-31 20:15:08 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nomenklatur.NKNachfuehrung | Grösse: 1
-2013-05-31 20:15:08 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:08 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nomenklatur.Gelaendename | Grösse: 133
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nomenklatur.Gelaendename
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.Gelaendename
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Liegenschaften(oid itf7)...
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nomenklatur.GelaendenamePos | Grösse: 131
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nomenklatur.GelaendenamePos
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.GelaendenamePos
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.LSNachfuehrung | Grösse: 455
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.LSNachfuehrung_ Perimeter | Grösse: 464
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:15:12 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 455
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:15:12 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2013-05-31 20:15:15 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.Grenzpunkt | Grösse: 28897
-2013-05-31 20:15:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2013-05-31 20:15:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2013-05-31 20:15:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.GrenzpunktPos | Grösse: 28897
-2013-05-31 20:15:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrenzpunktPos
-2013-05-31 20:15:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktPos
-2013-05-31 20:15:52 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.GrenzpunktSymbol | Grösse: 28897
-2013-05-31 20:15:52 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:15:52 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2013-05-31 20:15:52 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.ProjGrundstueck | Grösse: 42
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.ProjGrundstueckPos | Grösse: 46
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.ProjLiegenschaft | Grösse: 41
-2013-05-31 20:16:05 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:06 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.ProjLiegenschaft_ Geometrie | Grösse: 41
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:08 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 41
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.ProjSelbstRecht | Grösse: 1
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.ProjSelbstRecht_ Geometrie | Grösse: 1
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:08 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 1
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjSelbstRecht
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.Grundstueck | Grösse: 5778
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.Grundstueck
-2013-05-31 20:16:08 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
-2013-05-31 20:16:11 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.GrundstueckPos | Grösse: 5998
-2013-05-31 20:16:11 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:11 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2013-05-31 20:16:11 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2013-05-31 20:16:15 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie | Grösse: 15498
-2013-05-31 20:16:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:15 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.Liegenschaft | Grösse: 5234
-2013-05-31 20:16:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:16 org.catais.brw.interlis.IliReader [DEBUG] build area
-2013-05-31 20:16:16 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
-2013-05-31 20:16:17 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 5234
-2013-05-31 20:16:17 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:17 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.SelbstRecht | Grösse: 544
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjSelbstRecht
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Rohrleitungen(oid itf8)...
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Liegenschaften.SelbstRecht_ Geometrie | Grösse: 1034
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:27 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 544
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:27 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.SelbstRecht
-2013-05-31 20:16:28 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.RLNachfuehrung | Grösse: 1
-2013-05-31 20:16:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:28 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.SelbstRecht
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.Leitungsobjekt | Grösse: 1
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.LeitungsobjektPos | Grösse: 3
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.Linienelement | Grösse: 3
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Linienelement
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.Linienelement
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.Signalpunkt | Grösse: 7
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Signalpunkt
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.Signalpunkt
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.SignalpunktPos | Grösse: 7
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.SignalpunktPos
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.SignalpunktPos
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Nummerierungsbereiche(oid itf9)...
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rohrleitungen.Einzelpunkt | Grösse: 90
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Einzelpunkt
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.Einzelpunkt
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich | Grösse: 64
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nummerierungsbereiche.NBGeometrie | Grösse: 65
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_ Geometrie | Grösse: 65
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:30 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 65
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Gemeindegrenzen(oid itf10)...
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Nummerierungsbereiche.NummerierungsbereichPos | Grösse: 64
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nummerierungsbereiche.NummerierungsbereichPos
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.NummerierungsbereichPos
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung | Grösse: 4
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung_ Perimeter | Grösse: 3
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:31 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 4
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt | Grösse: 613
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2013-05-31 20:16:31 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos | Grösse: 613
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol | Grösse: 613
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2013-05-31 20:16:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.Gemeinde | Grösse: 1
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie | Grösse: 1
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Bezirksgrenzen(oid itf11)...
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze | Grösse: 1
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] build area
-2013-05-31 20:16:33 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
-2013-05-31 20:16:33 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 1
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Kantonsgrenzen(oid itf12)...
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Landesgrenzen(oid itf13)...
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Planeinteilungen(oid itf14)...
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Bezirksgrenzen.Bezirksgrenzabschnitt | Grösse: 2
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bezirksgrenzen.Bezirksgrenzabschnitt
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bezirksgrenzen.Bezirksgrenzabschnitt
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Planeinteilungen.Plan | Grösse: 136
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Planeinteilungen.Plan
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Planeinteilungen.Plan
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie | Grösse: 414
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Planeinteilungen.Plangeometrie | Grösse: 136
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] build area
-2013-05-31 20:16:33 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
-2013-05-31 20:16:33 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 136
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.TSEinteilung(oid itf15)...
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Planeinteilungen.PlanPos | Grösse: 136
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Planeinteilungen.PlanPos
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie | Grösse: 12
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.TSEinteilung.Toleranzstufe | Grösse: 5
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] build area
-2013-05-31 20:16:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
-2013-05-31 20:16:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 5
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Rutschgebiete(oid itf16)...
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.TSEinteilung.ToleranzstufePos | Grösse: 5
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.TSEinteilung.ToleranzstufePos
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.TSEinteilung.ToleranzstufePos
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rutschgebiete.Rutschung | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rutschgebiete.Rutschung_ Geometrie | Grösse: 3
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:35 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rutschgebiete.Rutschung
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.PLZOrtschaft(oid itf17)...
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Rutschgebiete.RutschungPos | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rutschgebiete.RutschungPos
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rutschgebiete.RutschungPos
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.OSNachfuehrung | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rutschgebiete.Rutschung
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.OrtschaftsVerbund | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.PLZOrtschaft.OrtschaftsVerbund
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.OrtschaftsVerbund
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.OrtschaftsVerbundText | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.PLZOrtschaft.OrtschaftsVerbundText
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.OrtschaftsVerbundText
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.Ortschaft | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.OSNachfuehrung
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.Ortschaft_ Flaeche | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:35 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.Ortschaft
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.OrtschaftsName | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.PLZOrtschaft.OrtschaftsName
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.OrtschaftsName
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.OrtschaftsName_Pos | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.PLZOrtschaft.OrtschaftsName_Pos
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.OrtschaftsName_Pos
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.PLZ6Nachfuehrung | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.Ortschaft
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.PLZ6 | Grösse: 1
-2013-05-31 20:16:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.PLZ6Nachfuehrung
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Gebaeudeadressen(oid itf18)...
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.PLZOrtschaft.PLZ6_ Flaeche | Grösse: 1
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:36 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 1
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.PLZ6
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung | Grösse: 171
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.PLZOrtschaft.PLZ6
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung_ Perimeter | Grösse: 135
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] build surface
-2013-05-31 20:16:36 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 171
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] done
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.Lokalisation | Grösse: 410
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2013-05-31 20:16:36 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.LokalisationsName | Grösse: 410
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos | Grösse: 711
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.Strassenstueck | Grösse: 743
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2013-05-31 20:16:37 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2013-05-31 20:16:38 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang | Grösse: 4660
-2013-05-31 20:16:38 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:38 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2013-05-31 20:16:38 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2013-05-31 20:16:40 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Planrahmen(oid itf19)...
-2013-05-31 20:16:40 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis
-2013-05-31 20:16:40 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2013-05-31 20:16:40 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2013-05-31 20:16:43 org.catais.brw.interlis.IliReader [DEBUG] Committing Transaction...
-2013-05-31 20:16:43 org.catais.brw.App [INFO] Start Reindexing...
-2013-05-31 20:16:43 org.catais.brw.App [INFO] End Reindexing.
-2013-05-31 20:16:43 org.catais.brw.App [INFO] Start Vacuum...
-2013-05-31 20:16:43 org.catais.brw.App [INFO] End Vacuum.
-2013-05-31 20:16:43 org.catais.brw.App [INFO] Ende: Fri May 31 20:16:43 CEST 2013
+2013-06-04 14:34:57 org.catais.brw.App [INFO] Start: Tue Jun 04 14:34:57 UTC 2013
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbhost: localhost
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbport: 5432
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbname: rosebud2
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbschema: aaaa
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbuser: mspublic
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbpwd: mspublic
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbadmin: stefan
+2013-06-04 14:34:57 org.catais.brw.utils.ReadProperties [DEBUG] dbadminpwd: ziegler12
+2013-06-04 14:34:57 org.catais.brw.App [DEBUG] {dbschema=aaaa, frame=LV03, dbadmin=stefan, dbhost=localhost, dbport=5432, dbname=rosebud2, dbpwd=mspublic, srcdir=/home/stefan/tmp/itf_lv03_tmp/, dbadminpwd=ziegler12, dbuser=mspublic}
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbhost: localhost
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbport: 5432
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbport: rosebud2
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbschema: aaaa
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbuser: mspublic
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbpwd: mspublic
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbadmin: stefan
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] dbadminpwd: ziegler12
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] srcdir: /home/stefan/tmp/itf_lv03_tmp/
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] Interlis model name: DM01AVCH24D
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [DEBUG] interlis model compiled
+2013-06-04 14:34:57 org.catais.brw.interlis.IliReader [INFO] Start deleting schema and tables...
+2013-06-04 14:34:59 org.catais.brw.interlis.IliReader [INFO] Schema and tables deleted.
+2013-06-04 14:34:59 org.catais.brw.interlis.IliReader [INFO] Start creating schema and tables...
+2013-06-04 14:36:03 org.catais.brw.interlis.IliReader [INFO] Schema and tables created.
+2013-06-04 14:36:04 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1nachfuehrung (2524, 0)
+2013-06-04 14:36:04 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1 (2524, 0)
+2013-06-04 14:36:04 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1pos (2524, 0)
+2013-06-04 14:36:04 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1symbol (2524, 0)
+2013-06-04 14:36:04 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_hfp1nachfuehrung (2524, 0)
+2013-06-04 14:36:04 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_hfp1 (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_hfp1pos (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2nachfuehrung (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2 (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2pos (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2symbol (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_hfp2nachfuehrung (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_hfp2 (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_hfp2pos (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3nachfuehrung (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3 (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3pos (2524, 0)
+2013-06-04 14:36:05 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3symbol (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_hfp3nachfuehrung (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_hfp3 (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_hfp3pos (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_bbnachfuehrung (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projboflaeche (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projgebaeudenummer (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projgebaeudenummerpos (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projobjektname (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projobjektnamepos (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projboflaechesymbol (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_boflaeche (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_gebaeudenummer (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_gebaeudenummerpos (2524, 0)
+2013-06-04 14:36:06 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_objektname (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_objektnamepos (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_boflaechesymbol (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_einzelpunkt (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_einzelpunktpos (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_eonachfuehrung (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_einzelobjekt (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_flaechenelement (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_flaechenelementsymbol (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_linienelement (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_linienelementsymbol (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_punktelement (2524, 0)
+2013-06-04 14:36:07 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektname (2524, 0)
+2013-06-04 14:36:08 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektnamepos (2524, 0)
+2013-06-04 14:36:08 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektnummer (2524, 0)
+2013-06-04 14:36:08 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektnummerpos (2524, 0)
+2013-06-04 14:36:08 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_einzelpunkt (2524, 0)
+2013-06-04 14:36:08 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_einzelpunktpos (2524, 0)
+2013-06-04 14:36:08 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from hoehen_honachfuehrung (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from hoehen_hoehenpunkt (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from hoehen_hoehenpunktpos (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from hoehen_gelaendekante (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from hoehen_aussparung (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_nknachfuehrung (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_flurname (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_flurnamepos (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_ortsname (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_ortsnamepos (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_gelaendename (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nomenklatur_gelaendenamepos (2524, 0)
+2013-06-04 14:36:09 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lsnachfuehrung (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grenzpunkt (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grenzpunktpos (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grenzpunktsymbol (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projgrundstueck (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projgrundstueckpos (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib1 (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projliegenschaft (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib2 (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projselbstrecht (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib3 (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projbergwerk (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grundstueck (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grundstueckpos (2524, 0)
+2013-06-04 14:36:10 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib4 (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_liegenschaft (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib5 (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_selbstrecht (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib6 (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from liegenschaften_bergwerk (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_rlnachfuehrung (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_leitungsobjekt (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_leitungsobjektpos (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_lineattrib7 (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_flaechenelement (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_linienelement (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_punktelement (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_signalpunkt (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_signalpunktpos (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_einzelpunkt (2524, 0)
+2013-06-04 14:36:11 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_einzelpunktpos (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nummerierungsbereiche_nummerierungsbereich (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nummerierungsbereiche_nbgeometrie (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from nummerierungsbereiche_nummerierungsbereichpos (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_gemnachfuehrung (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_hoheitsgrenzpunkt (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_hoheitsgrenzpunktpos (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_hoheitsgrenzpunktsymbol (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_gemeinde (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_projgemeindegrenze (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_lineattrib8 (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_gemeindegrenze (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from bezirksgrenzen_bezirksgrenzabschnitt (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from kantonsgrenzen_kantonsgrenzabschnitt (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from landesgrenzen_landesgrenzabschnitt (2524, 0)
+2013-06-04 14:36:12 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planeinteilungen_plan (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planeinteilungen_plangeometrie (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planeinteilungen_planpos (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from tseinteilung_toleranzstufe (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from tseinteilung_toleranzstufepos (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rutschgebiete_rutschung (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from rutschgebiete_rutschungpos (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_osnachfuehrung (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaftsverbund (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaftsverbundtext (2524, 0)
+2013-06-04 14:36:13 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaft (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaftsname (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_plz6nachfuehrung (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from plzortschaft_plz6 (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebnachfuehrung (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_lokalisation (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_lokalisationsname (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_lokalisationsnamepos (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_benanntesgebiet (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_strassenstueck (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudeeingang (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_hausnummerpos (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudename (2524, 0)
+2013-06-04 14:36:14 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudenamepos (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudebeschreibung (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_planlayout (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_planbeschriftung (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_planbeschriftungpos (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_koordinatenanschrift (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_koordinatenanschriftpos (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_linienobjekt (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_koordinatenlinie (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_darstellungsflaeche (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_planlayoutsymbol (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Deleting data from planrahmen_netzkreuz (2524, 0)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] Starting Transaction...
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie1(oid itf0)...
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie2(oid itf1)...
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] alt: null
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung | Grösse: 1
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: null
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [WARN] no features in surfaceMainCollection
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2 | Grösse: 1
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:15 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos | Grösse: 1
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie3(oid itf2)...
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol | Grösse: 1
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung | Grösse: 1
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3 | Grösse: 32
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos | Grösse: 32
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2013-06-04 14:36:16 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Bodenbedeckung(oid itf3)...
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol | Grösse: 32
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung | Grösse: 21
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BoFlaeche
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie | Grösse: 1775
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BoFlaeche
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BoFlaeche | Grösse: 181
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:17 org.catais.brw.interlis.IliReader [DEBUG] build area
+2013-06-04 14:36:18 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
+2013-06-04 14:36:19 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 181
+2013-06-04 14:36:19 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:19 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.Objektname
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer | Grösse: 36
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.Objektname
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.Objektname | Grösse: 4
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.Objektname
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.ObjektnamePos | Grösse: 4
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Einzelobjekte(oid itf4)...
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol | Grösse: 9
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.EONachfuehrung | Grösse: 9
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2013-06-04 14:36:21 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Einzelobjekt | Grösse: 67
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Flaechenelement_Geometrie
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Flaechenelement | Grösse: 66
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Linienelement
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Flaechenelement_Geometrie
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Flaechenelement_ Geometrie | Grösse: 66
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceHelper = true
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] build surface
+2013-06-04 14:36:22 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 66
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:22 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Objektname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Linienelement
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Linienelement | Grösse: 12
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Linienelement
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.ObjektnamePos
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Objektname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Objektname | Grösse: 2
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Objektname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Objektname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Hoehen(oid itf5)...
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Nomenklatur(oid itf6)...
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.ObjektnamePos
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.ObjektnamePos | Grösse: 2
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.ObjektnamePos
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.ObjektnamePos
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Flurname_Geometrie
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.NKNachfuehrung | Grösse: 3
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Flurname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Flurname_Geometrie
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Flurname_Geometrie | Grösse: 419
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.FlurnamePos
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Flurname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Flurname | Grösse: 15
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] build area
+2013-06-04 14:36:23 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
+2013-06-04 14:36:23 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 15
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.Flurname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Ortsname
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.FlurnamePos
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.FlurnamePos | Grösse: 15
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:23 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nomenklatur.FlurnamePos
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Ortsname_Geometrie
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Ortsname
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Ortsname | Grösse: 1
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Nomenklatur.Ortsname
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Ortsname_Geometrie
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Ortsname_ Geometrie | Grösse: 1
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceHelper = true
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] build surface
+2013-06-04 14:36:24 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 1
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Liegenschaften(oid itf7)...
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.OrtsnamePos | Grösse: 1
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.LSNachfuehrung | Grösse: 11
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Nomenklatur.Ortsname
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Grenzpunkt | Grösse: 574
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2013-06-04 14:36:24 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2013-06-04 14:36:26 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjGrundstueck
+2013-06-04 14:36:26 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2013-06-04 14:36:26 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol | Grösse: 574
+2013-06-04 14:36:26 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:26 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2013-06-04 14:36:26 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjGrundstueck
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjGrundstueck | Grösse: 3
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.ProjGrundstueck
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueck
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos | Grösse: 3
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_Geometrie
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjLiegenschaft | Grösse: 3
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Grundstueck
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_Geometrie
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_ Geometrie | Grösse: 3
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceHelper = true
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] build surface
+2013-06-04 14:36:28 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 3
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Grundstueck
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Grundstueck | Grösse: 94
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.Grundstueck
+2013-06-04 14:36:28 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.GrundstueckPos | Grösse: 94
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Liegenschaft
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie | Grösse: 842
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Rohrleitungen(oid itf8)...
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Liegenschaft
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Liegenschaft | Grösse: 94
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] build area
+2013-06-04 14:36:29 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
+2013-06-04 14:36:29 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 94
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:29 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.RLNachfuehrung | Grösse: 1
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.Leitungsobjekt | Grösse: 1
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.Linienelement
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos | Grösse: 1
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Nummerierungsbereiche(oid itf9)...
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.Linienelement
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.Linienelement | Grösse: 2
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Linienelement
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.Linienelement
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich | Grösse: 6
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:30 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_Geometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie | Grösse: 6
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Gemeindegrenzen(oid itf10)...
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_Geometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_ Geometrie | Grösse: 6
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceHelper = true
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] build surface
+2013-06-04 14:36:32 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Surface): 6
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung | Grösse: 2
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt | Grösse: 181
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2013-06-04 14:36:32 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos | Grösse: 7
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol | Grösse: 181
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Gemeinde | Grösse: 1
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2013-06-04 14:36:33 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie | Grösse: 1
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Bezirksgrenzen(oid itf11)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Kantonsgrenzen(oid itf12)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Landesgrenzen(oid itf13)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Planeinteilungen(oid itf14)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.Plan
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze | Grösse: 1
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] build area
+2013-06-04 14:36:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
+2013-06-04 14:36:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 1
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.Plan
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.Plan | Grösse: 4
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Planeinteilungen.Plan
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Planeinteilungen.Plan
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.Plangeometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie | Grösse: 291
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.PlanPos
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.Plangeometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.Plangeometrie | Grösse: 4
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] build area
+2013-06-04 14:36:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
+2013-06-04 14:36:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 4
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.TSEinteilung(oid itf15)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.PlanPos
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.PlanPos | Grösse: 4
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Planeinteilungen.PlanPos
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.TSEinteilung.Toleranzstufe
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie | Grösse: 248
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Rutschgebiete(oid itf16)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.PLZOrtschaft(oid itf17)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Gebaeudeadressen(oid itf18)...
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.TSEinteilung.Toleranzstufe
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.TSEinteilung.Toleranzstufe | Grösse: 2
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] build area
+2013-06-04 14:36:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] spatial index built.
+2013-06-04 14:36:34 org.catais.brw.utils.SurfaceAreaBuilder [DEBUG] Anzahl polygonierte/gejointe Features (Area): 2
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] done
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung | Grösse: 7
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] isSurfaceMain = true
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.Lokalisation | Grösse: 6
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.LokalisationsName | Grösse: 6
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos | Grösse: 7
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:34 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.Strassenstueck | Grösse: 53
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang | Grösse: 59
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] DM01AVCH24D.Planrahmen(oid itf19)...
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
+2013-06-04 14:36:35 org.catais.brw.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
+2013-06-04 14:36:36 org.catais.brw.interlis.IliReader [DEBUG] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
+2013-06-04 14:36:36 org.catais.brw.interlis.IliReader [DEBUG] Committing Transaction...
+2013-06-04 14:36:36 org.catais.brw.App [INFO] Start Reindexing...
+2013-06-04 14:36:36 org.catais.brw.App [INFO] End Reindexing.
+2013-06-04 14:36:36 org.catais.brw.App [INFO] Start Vacuum...
+2013-06-04 14:36:36 org.catais.brw.App [INFO] End Vacuum.
+2013-06-04 14:36:36 org.catais.brw.App [INFO] Ende: Tue Jun 04 14:36:36 UTC 2013
