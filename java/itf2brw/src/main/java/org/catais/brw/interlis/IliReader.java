@@ -155,8 +155,8 @@ public class IliReader {
         compileModel();
         
         // delete existing pg schema and create new ones
-        deletePostgresSchemaAndTables();
-        createPostgresSchemaAndTables();
+        //deletePostgresSchemaAndTables();
+        //createPostgresSchemaAndTables();
         
         // get all feature types
         featureTypes = GTUtils.getFeatureTypesFromItfTransferViewables( iliTd, this.epsg );
@@ -171,8 +171,8 @@ public class IliReader {
     	
     	ioxReader = new ch.interlis.iom_j.itf.ItfReader( new java.io.File( this.itfFileName ) );
     	((ItfReader) ioxReader).setModel( iliTd );
-    	//((ItfReader) ioxReader).setRenumberTids( true );
-    	((ItfReader) ioxReader).setRenumberTids( false );
+    	((ItfReader) ioxReader).setRenumberTids( true );
+    	//((ItfReader) ioxReader).setRenumberTids( false );
     	((ItfReader) ioxReader).setReadEnumValAsItfCode( true );
 
     	IoxEvent event = ioxReader.read();
