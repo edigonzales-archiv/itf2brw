@@ -127,6 +127,8 @@ public class IliReader {
     //private FeatureCollection<SimpleFeatureType, SimpleFeature> collection = null;
     //private SimpleFeatureCollection areaHelperCollection = null;
     //private SimpleFeatureCollection surfaceMainCollection = null;
+	
+	private DataStore datastore = null;
 
     private Transaction t = null;
     
@@ -213,6 +215,7 @@ public class IliReader {
 
     			// write last table to postgis		
     			this.writeToPostgis();
+    			datastore.dispose();
 
     			break;
     		}
@@ -709,7 +712,9 @@ public class IliReader {
     		params.put( PostgisNGDataStoreFactory.LOOSEBBOX, true );
     		params.put( PostgisNGDataStoreFactory.PREPARED_STATEMENTS, true );
 
-    		DataStore datastore = new PostgisNGDataStoreFactory().createDataStore( params );
+    		if (datastore == null) {
+        		datastore = new PostgisNGDataStoreFactory().createDataStore( params );
+    		}
 
     		String tableName = ( featureName.substring( featureName.indexOf(".") + 1 ) ).replace( ".", "_" ).toLowerCase();
 
@@ -726,17 +731,17 @@ public class IliReader {
     			} catch ( IOException ex ) {
     				ex.printStackTrace();
         			logger.error( ex.getMessage() );
-        			datastore.dispose();
+        			//datastore.dispose();
     			}
     		} 
     		catch ( IOException ex ) {
     			ex.printStackTrace();
     			logger.error( "Table \"" + tableName + "\" not found." );
     			logger.error( ex.getMessage() );
-    			datastore.dispose();
+    			//datastore.dispose();
     		}
 
-    		datastore.dispose();
+    		//datastore.dispose();
 
     	} catch ( IOException ex ) 
     	{
